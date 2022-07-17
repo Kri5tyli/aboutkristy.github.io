@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif, 'Merriweather', serif;
+    letter-spacing: 0.1rem;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+    cursor: default;
+    letter-spacing: 3px;
+}
+
+::selection {
+    background: #805C63;
+    color: rgb(246, 245, 255);
+}
+
+img {
+    vertical-align: middle;
+}
+
+input,
+button {
+    border: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+/* web卷軸設定 */
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);
+    
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 209, 209);
+    
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #E86356;
+}

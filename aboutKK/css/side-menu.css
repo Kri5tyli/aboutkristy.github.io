@@ -1,0 +1,123 @@
+html,
+body {
+    height: 100%;
+}
+
+.right {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    z-index: 1;
+}
+
+.side-menu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 0px 20px;
+    width: 250px;
+    height: 100%;
+    background-image: linear-gradient(212deg, #FF9A8B, #FF6A88, #FF99AC);
+    box-shadow: 3px 0px 5px hsla(360, 50%, 45%, .4);
+    /* 讓視窗移到螢幕外 */
+    transform: translateX(0%);
+    transition: .3s;
+}
+
+.side-menu form {
+    display: flex;
+    border: #fbedf3 1px solid;
+    border-radius: 10px;
+}
+
+.side-menu form input,
+.side-menu form button {
+    padding: 5px;
+    background: transparent;
+    outline: none;
+}
+
+.side-menu form input {
+    width: 175px;
+    color: beige;
+}
+
+::placeholder {
+    color: #fbedf3;
+    font-size: .4em;
+    padding-left: 5px;
+}
+
+.side-menu form button {
+    width: 55px;
+}
+
+.fa-magnifying-glass {
+    color: beige;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    position: relative;
+    display: block;
+    padding: 10px 10px;
+    color: beige;
+    /* width: 80%; */
+    background-color: transparent;
+    transition: all .3s;
+}
+
+nav a:hover {
+    background-color: #fbedf3;
+    color: #FF6A88;
+}
+
+nav a+a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10px;
+    right: 10px;
+    bottom: 0;
+    border-top: 1px solid rgba(254, 229, 229, 0.886);
+}
+
+nav a i::after {
+    content: '';
+    padding: 0px 5px;
+}
+
+.side-menu label {
+    position: absolute;
+    width: 30px;
+    height: 70px;
+    background-color: rgba(17, 15, 159, 0);
+    color: rgb(239, 79, 79);
+    font-size: 1.8rem;
+    /* 絕對定位的居中方式 */
+    right: -30px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    line-height: 70px;
+    text-align: center;
+}
+
+/* 隱藏input checkbox */
+#side-menu-switch {
+    position: absolute;
+    opacity: 0;
+}
+
+/* 讓側邊導覽跑出來 */
+#side-menu-switch:checked+.side-menu {
+    transform: translateX(-97%);
+}
+
+/* 讓引出剪頭反向 */
+#side-menu-switch:checked+.side-menu label .fa-angle-right {
+    transform: scaleX(-1);
+}
